@@ -1,8 +1,10 @@
 package com.android.anmol.shift;
 
 /**
- * Base class to perform the DB operations on the worker thread.
- * <br><br>
+ * Base class to perform the Long running operations on the worker thread.
+ * <br>
+ * Please note the operations submitted are run in a serial i.e. FIFO manner.
+ * <br>
  * It will trigger the completion event to the callback provided {@link OperationCallback OperationCallback}'s
  * {@link OperationCallback#onSuccess(Object)} and {@link OperationCallback#onError(String)} respectively.
  * <br>
